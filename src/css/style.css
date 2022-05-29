@@ -1,0 +1,67 @@
+:root {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+
+  /* Dracula Color Palette */
+  --bg: #282a36;
+  --current-line: #44475a;
+  --selection: #44475a;
+  --foreground: #f8f8f2;
+  --comment: #6272a4;
+  --cyan: #8be9fd;
+  --green: #50fa7b;
+  --orange: #ffb86c;
+  --pink: #ff79c6;
+  --purple: #bd93f9;
+  --red: #ff5555;
+  --yellow: #f1fa8c;
+}
+
+html {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+#app {
+  font-family: monospace, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--foreground);
+}
+
+.commandList {
+  list-style: none;
+  padding: 0;
+}
+
+.commandList__item {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.3rem;
+  align-items: center;
+  opacity: 0.9;
+  color: var(--comment);
+}
+
+.command {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.3rem;
+  align-items: center;
+}
+
+.command__user {
+  color: var(--cyan);
+}
+
+.command__input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--foreground);
+}
