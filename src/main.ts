@@ -1,5 +1,5 @@
-import './css/normalize.css';
-import './css/style.css';
+import './scss/normalize.scss';
+import './scss/style.scss';
 import {events} from './ts/events';
 
 // const app = document.querySelector<HTMLDivElement>('#app')!

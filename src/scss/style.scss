@@ -29,6 +29,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.app {
+  padding: 0.5rem 1rem;
+}
+
 body {
   background-color: var(--bg);
   color: var(--foreground);
