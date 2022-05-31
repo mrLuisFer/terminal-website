@@ -1,4 +1,5 @@
 export type TLiHtmlProps = {
-  value: string;
-  listElement: HTMLUListElement;
-};
+  value: string
+  listElement: HTMLUListElement
+  id: string
+}
