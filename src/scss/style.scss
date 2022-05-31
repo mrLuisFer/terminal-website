@@ -16,6 +16,8 @@
   --purple: #bd93f9;
   --red: #ff5555;
   --yellow: #f1fa8c;
+  --inconsolata: "Inconsolata", monospace;
+  --jetbrains: "JetBrains Mono", monospace;
 }
 
 html {
@@ -24,7 +26,7 @@ html {
 }
 
 #app {
-  font-family: monospace, sans-serif;
+  font-family: var(--jetbrains);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 0.5rem 1rem;
@@ -34,6 +36,7 @@ body {
   background-color: var(--bg);
   color: var(--foreground);
   font-size: 1rem;
+  overflow: hidden;
 
   @media (min-width: 600px) {
     font-size: 1.2rem;
@@ -51,6 +54,11 @@ body {
     align-items: center;
     opacity: 0.9;
     color: var(--comment);
+    font-size: 0.9rem;
+
+    @media (min-width: 500px) {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -59,6 +67,11 @@ body {
   justify-content: flex-start;
   gap: 0.3rem;
   align-items: center;
+  font-size: 0.9rem;
+
+  @media (min-width: 500px) {
+    font-size: 1rem;
+  }
 
   &__user {
     color: var(--cyan);
@@ -71,8 +84,16 @@ body {
     outline: none;
     color: var(--foreground);
 
-    @media (min-width: 500px) {
-      width: 600px;
+    @media (min-width: 550px) {
+      width: 400px;
+    }
+  }
+
+  &__content {
+    opacity: 0.8;
+
+    &--error {
+      color: var(--red);
     }
   }
 }
