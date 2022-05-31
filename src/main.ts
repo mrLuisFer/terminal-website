@@ -1,28 +1,26 @@
-import './scss/normalize.scss';
-import './scss/style.scss';
-import {events} from './ts/events';
+import "./scss/normalize.scss";
+import "./scss/style.scss";
+import { events } from "./ts/events";
+import createLiHtml from "./ts/utils/createLiHtml";
 
 // const app = document.querySelector<HTMLDivElement>('#app')!
-const commandList = document.querySelector<HTMLUListElement>('#command-list');
-const commandInput = document.querySelector<HTMLInputElement>('#command-input');
+const commandList = document.querySelector<HTMLUListElement>("#command-list")!;
+const commandInput =
+  document.querySelector<HTMLInputElement>("#command-input")!;
 
-let value = '';
+window.addEventListener("load", () => {
+  const windowWidth: number = window.innerWidth;
+  commandInput.maxLength = windowWidth > 500 ? 50 : 20;
+});
 
-commandInput?.addEventListener('change', (ev: any): void => {
+let value = "";
+commandInput?.addEventListener("change", (ev: any): void => {
   const eventValue: string = ev.target.value;
   value = eventValue;
 
   if (value.length > 0) {
     events(value);
-
-    let li = document.createElement('li');
-    let p = document.createElement('p');
-    li.classList.add('commandList__item');
-    p.classList.add('command__user');
-    p.textContent = 'user@user $';
-    li.append(p);
-    li.append(value);
-    commandList?.appendChild(li);
+    createLiHtml({ value, listElement: commandList });
   }
-  ev.target.value = '';
+  ev.target.value = "";
 });
