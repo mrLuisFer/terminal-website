@@ -1,16 +1,16 @@
-import pong from './events/pongs';
-import commandError from './events/commandError';
-import clear from './events/clear';
+import pong from "./pongs";
+import commandError from "./commandError";
+import clear from "./clear";
 
 export const events = (value: string): void => {
   switch (value) {
-    case 'ping':
+    case "ping":
       pong();
       break;
-    case 'clear':
+    case "clear":
       clear();
       break;
-    case 'cls':
+    case "cls":
       clear();
       break;
     default:

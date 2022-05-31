@@ -27,29 +27,31 @@ html {
   font-family: monospace, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.app {
   padding: 0.5rem 1rem;
 }
 
 body {
   background-color: var(--bg);
   color: var(--foreground);
+  font-size: 1rem;
+
+  @media (min-width: 600px) {
+    font-size: 1.2rem;
+  }
 }
 
 .commandList {
   list-style: none;
   padding: 0;
-}
 
-.commandList__item {
-  display: flex;
-  justify-content: flex-start;
-  gap: 0.3rem;
-  align-items: center;
-  opacity: 0.9;
-  color: var(--comment);
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.3rem;
+    align-items: center;
+    opacity: 0.9;
+    color: var(--comment);
+  }
 }
 
 .command {
@@ -57,15 +59,20 @@ body {
   justify-content: flex-start;
   gap: 0.3rem;
   align-items: center;
-}
 
-.command__user {
-  color: var(--cyan);
-}
+  &__user {
+    color: var(--cyan);
+  }
 
-.command__input {
-  background: transparent;
-  border: none;
-  outline: none;
-  color: var(--foreground);
+  &__input {
+    display: inline-block;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--foreground);
+
+    @media (min-width: 500px) {
+      width: 600px;
+    }
+  }
 }
