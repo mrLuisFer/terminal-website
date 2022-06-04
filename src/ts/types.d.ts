@@ -3,3 +3,9 @@ export type TLiHtmlProps = {
   listElement: HTMLUListElement
   id: string
 }
+
+export interface CommonEventProps {
+  liElement: HTMLElement
+  sectionElement: HTMLElement
+}
+

@@ -11,19 +11,43 @@
       href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600&family=JetBrains+Mono:wght@200;300;400;500&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/0b9946e474.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main class="app" id="app">
-      <ul class="commandList" id="command-list"></ul>
-      <section class="command">
-        <p class="command__user">user@user $</p>
-        <input
-          class="command__input"
-          type="text"
-          id="command-input"
-          autofocus
-          autocomplete="false"
-        />
+      <header class="header">
+        .
+        <div class="header__icons">
+          <a
+            href="https://github.com/mrLuisFer"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="header__link"
+          >
+            <i class="icon fa-brands fa-github"></i>
+          </a>
+          <i class="icon fa-solid fa-broom" id="clearIcon"></i>
+        </div>
+      </header>
+      <section class="terminal">
+        <ul class="commandList" id="command-list"></ul>
+        <section class="command">
+          <p class="command__user"><span class="success">user</span>@user $</p>
+          <input
+            class="command__input"
+            type="text"
+            id="command-input"
+            autofocus
+            autocomplete="false"
+          />
+        </section>
       </section>
     </main>
     <script type="module" src="/src/main.ts"></script>

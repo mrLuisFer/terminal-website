@@ -1,3 +1,6 @@
+@use "normalize.scss";
+@use "header.scss";
+
 :root {
   margin: 0;
   padding: 0;
@@ -29,23 +32,26 @@ html {
   font-family: var(--jetbrains);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 0.5rem 1rem;
 }
 
 body {
   background-color: var(--bg);
   color: var(--foreground);
   font-size: 1rem;
-  overflow: hidden;
 
   @media (min-width: 600px) {
     font-size: 1.2rem;
   }
 }
 
+.terminal {
+  padding: 0 1rem 0.5rem;
+}
+
 .commandList {
   list-style: none;
   padding: 0;
+  margin: 0.5rem 0 0;
 
   &__item {
     display: flex;
@@ -75,6 +81,7 @@ body {
 
   &__user {
     color: var(--cyan);
+    user-select: none;
   }
 
   &__input {
@@ -90,10 +97,42 @@ body {
   }
 
   &__content {
-    opacity: 0.8;
+    opacity: 0.9;
+    font-size: 1rem;
 
     &--error {
       color: var(--red);
     }
+  }
+
+  &__cmdValue {
+    color: var(--foreground);
+  }
+}
+
+.error {
+  color: var(--red);
+}
+
+.success {
+  color: var(--green);
+}
+
+.info {
+  color: var(--cyan);
+}
+
+.text {
+  margin-top: 0rem;
+  color: var(--comment);
+}
+
+.exitLink {
+  color: var(--green);
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
   }
 }
