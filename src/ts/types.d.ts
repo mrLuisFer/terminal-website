@@ -1,5 +1,7 @@
+export type Value = string
+
 export type TLiHtmlProps = {
-  value: string
+  value: Value
   listElement: HTMLUListElement
   id: string
 }

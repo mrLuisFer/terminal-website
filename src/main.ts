@@ -6,7 +6,7 @@ import clear from "./ts/events/clear"
 
 const commandList = document.querySelector<HTMLUListElement>("#command-list")!
 const commandInput = document.querySelector<HTMLInputElement>("#command-input")!
-const clearIcon = document.querySelector<HTMLElement>("#clearIcon")
+const clearIcon = document.querySelector<HTMLElement>("#clearIcon")!
 
 window.addEventListener("load", () => {
   const windowWidth: number = window.innerWidth

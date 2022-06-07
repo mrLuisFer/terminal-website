@@ -10,7 +10,7 @@ const commandError = ({
   sectionElement,
 }: ErrorEventProps) => {
   sectionElement.classList.add("command__content--error")
-  sectionElement.textContent = `Error in ${event}`
+  sectionElement.textContent = `error in ${event}: command not found`
   liElement.insertAdjacentElement("afterend", sectionElement)
 }
 
