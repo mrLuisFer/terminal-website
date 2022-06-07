@@ -1,17 +1,8 @@
-import { CommonEventProps, Value } from "../../types"
+import { CommonEventProps } from "../../types"
 import chrome from "./chrome"
 import firefox from "./firefox"
 
-interface FetchProps extends CommonEventProps {
-  event: Value
-}
-
-export default function fetch({
-  event,
-  liElement,
-  sectionElement,
-}: FetchProps) {
-  console.log(event)
+export default function fetch({ liElement, sectionElement }: CommonEventProps) {
   const appCodename = navigator.userAgent.match(
     /(opera|chrome|safari|firefox|msie)/i
   )!
@@ -25,7 +16,7 @@ export default function fetch({
       chrome({ sectionElement, liElement })
       break
     default:
-      console.log("Browser doesn't support")
+      console.log(`Browser: ${navigator.userAgent} doesn't support`)
       return
   }
 }
