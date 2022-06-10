@@ -146,9 +146,10 @@ body {
     align-items: flex-start;
   }
 
-  @media (min-width: 800px) {
+  @media (min-width: 700px) {
     justify-content: left;
     gap: 3rem;
+    margin-left: 3rem;
   }
 
   &__img {

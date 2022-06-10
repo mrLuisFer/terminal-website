@@ -26,7 +26,7 @@ export const events = ({ value, id }: { value: string; id: string }): void => {
       exit({ liElement, sectionElement })
       break
     case "fetch":
-      fetch({ event: value, liElement, sectionElement })
+      fetch({ liElement, sectionElement })
       break
     case "open":
       break

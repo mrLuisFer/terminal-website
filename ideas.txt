@@ -1,4 +1,4 @@
-- neofetch browser
+- neofetch browser ✅
 - matrix styles
 - open command with some url as a value
 - help command
