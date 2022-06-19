@@ -1,55 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="terminal_logo.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Terminal</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600&family=JetBrains+Mono:wght@200;300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/0b9946e474.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <main class="app" id="app">
-      <header class="header">
-        .
-        <div class="header__icons">
-          <a
-            href="https://github.com/mrLuisFer"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="header__link"
-          >
-            <i class="icon fa-brands fa-github"></i>
-          </a>
-          <i class="icon fa-solid fa-broom" id="clearIcon"></i>
-        </div>
-      </header>
-      <section class="terminal">
-        <ul class="commandList" id="command-list"></ul>
-        <section class="command">
-          <p class="command__user"><span class="success">user</span>@user $</p>
-          <input
-            class="command__input"
-            type="text"
-            id="command-input"
-            autofocus
-            autocomplete="false"
-          />
-        </section>
-      </section>
-    </main>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/svg+xml" href="terminal_logo.svg"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Terminal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600&family=JetBrains+Mono:wght@200;300;400;500&display=swap"
+    rel="stylesheet"
+  />
+  <script
+    src="https://kit.fontawesome.com/0b9946e474.js"
+    crossorigin="anonymous"
+  ></script>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+<main class="app" id="app">
+  <header class="header">
+    <button class="header__iconMenu">
+      <i class="fa-solid fa-ellipsis"></i>
+    </button>
+    <div class="header__icons">
+      <a
+        href="https://github.com/mrLuisFer"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="header__link header__icons-container"
+      >
+        <i class="icon fa-brands fa-github"></i>
+        <p>GitHub</p>
+      </a>
+      <a href="https://mrluisfer.netlify.app/"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="header__link header__icons-container"
+      >
+        <i class="fa-solid fa-user"></i>
+        <p>Portfolio</p>
+      </a>
+      <a href="https://mrluisfer-blog.netlify.app/"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="header__link header__icons-container"
+      >
+        <i class="fa-solid fa-book-open"></i>
+        <p>Blog</p>
+      </a>
+      <button id="clearIcon" class="header__icons-container">
+        <i class="icon fa-solid fa-broom"></i>
+        <p>Clear</p>
+      </button>
+    </div>
+  </header>
+  <section class="terminal">
+    <ul class="commandList" id="command-list"></ul>
+    <section class="command">
+      <p class="command__user"><span class="success">user</span>@user $</p>
+      <input
+        class="command__input"
+        type="text"
+        id="command-input"
+        autofocus
+        autocomplete="false"
+      />
+    </section>
+  </section>
+</main>
+<script type="module" src="/src/main.ts"></script>
+</body>
 </html>
