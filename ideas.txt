@@ -4,3 +4,4 @@
 - help command
 - suggest command (open on the issues repository) ✅
 - random meme command
+- use rick and morty api (?)
