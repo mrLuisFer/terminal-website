@@ -16,6 +16,15 @@ window.addEventListener("load", () => {
   commandInput.maxLength = windowWidth > 500 ? 50 : 20
 })
 
+document.addEventListener("click", (e: any) => {
+  const menuClicked = headerMenu.contains(e.target)
+  const menuIconClicked = headerMenuIcon.contains(e.target)
+  if (!menuClicked && !menuIconClicked) {
+    headerMenu.classList.add("hidden")
+    headerMenuIcon.classList.remove("menuIconClicked")
+  }
+})
+
 terminalSection.addEventListener("click", () => {
   commandInput.focus()
 })
