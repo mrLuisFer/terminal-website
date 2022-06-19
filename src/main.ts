@@ -17,11 +17,11 @@ window.addEventListener("load", () => {
 })
 
 document.addEventListener("click", (e: any) => {
-  const menuClicked = headerMenu.contains(e.target)
-  const menuIconClicked = headerMenuIcon.contains(e.target)
-  if (!menuClicked && !menuIconClicked) {
+  const isMenuClicked = headerMenu.contains(e.target)
+  const isMenuIconClicked = headerMenuIcon.contains(e.target)
+  if (!isMenuClicked && !isMenuIconClicked) {
     headerMenu.classList.add("hidden")
-    headerMenuIcon.classList.remove("menuIconClicked")
+    headerMenuIcon.classList.remove("isMenuIconClicked")
   }
 })
 
