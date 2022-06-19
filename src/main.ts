@@ -7,10 +7,22 @@ import clear from "./ts/events/clear"
 const commandList = document.querySelector<HTMLUListElement>("#command-list")!
 const commandInput = document.querySelector<HTMLInputElement>("#command-input")!
 const clearIcon = document.querySelector<HTMLElement>("#clearIcon")!
+const terminalSection = document.querySelector<HTMLElement>("#terminal")!
+const headerMenuIcon = document.querySelector<HTMLElement>("#headerMenuIcon")!
+const headerMenu = document.querySelector<HTMLElement>("#headerMenu")!
 
 window.addEventListener("load", () => {
   const windowWidth: number = window.innerWidth
   commandInput.maxLength = windowWidth > 500 ? 50 : 20
+})
+
+terminalSection.addEventListener("click", () => {
+  commandInput.focus()
+})
+
+headerMenuIcon.addEventListener("click", () => {
+  headerMenu.classList.toggle("hidden")
+  headerMenuIcon.classList.toggle("menuIconClicked")
 })
 
 let value = ""
