@@ -11,9 +11,13 @@
 
   &__icons {
     display: flex;
-    gap: 1.5rem;
+    gap: 0.5rem;
 
-    &-container {
+    @media (min-width: 800px) {
+      gap: 1.5rem;
+    }
+
+    &--container {
       display: flex;
       align-items: center;
       column-gap: 0.5rem;
@@ -27,13 +31,39 @@
       transition: 0.2s ease;
       border-radius: 10px;
       font-size: 1rem;
+      position: relative;
 
       &:hover {
         background-color: var(--bg);
+
+        @media (max-width: 800px) {
+          &::after {
+            content: attr(data-text);
+            position: absolute;
+            background: var(--bg);
+            width: max-content;
+            padding: 0.1rem 0.5rem;
+            height: 30px;
+            top: 40px;
+            z-index: 9;
+            border-radius: 5px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            right: 0;
+          }
+        }
       }
 
       p {
-        margin: 0;
+        display: none;
+
+        @media (min-width: 800px) {
+          display: block;
+          margin: 0;
+        }
       }
     }
   }
@@ -70,6 +100,7 @@
     width: 200px;
     transition: 0.2s ease;
     font-size: 0.9rem;
+    z-index: 10;
 
     &:hover {
       box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.7);
