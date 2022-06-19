@@ -5,11 +5,36 @@ import exit from "./exit"
 import fetch from "./fetch"
 import open from "./open"
 
+const eventsArray: string[] = [
+  "ping",
+  "clear",
+  "cls",
+  "c",
+  "exit",
+  "fetch",
+  "neofetch",
+  "open",
+  "mtrx",
+  "matrix"
+]
+
+let errorCount = 0;
+export const resetErrorCounter = () => {
+  errorCount = 0
+}
+
 export const events = ({value, id}: { value: string; id: string }): void => {
   const liElement = document.getElementById(`${id}`)!
   const sectionElement = document.createElement("section")
   sectionElement.classList.add("command__content")
   const events = value.split(" ")
+
+  const atEvents: boolean = eventsArray.includes(value)
+  if (!atEvents) {
+    errorCount++;
+  } else {
+    errorCount = 0;
+  }
 
   switch (events[0]) {
     case "ping":
@@ -41,7 +66,7 @@ export const events = ({value, id}: { value: string; id: string }): void => {
     case "matrix":
       break
     default:
-      commandError({event: value, liElement, sectionElement})
+      commandError({event: value, liElement, sectionElement, errorCounter: errorCount})
       break
   }
 }
