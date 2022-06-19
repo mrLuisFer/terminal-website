@@ -7,7 +7,6 @@ export default function chrome({
   liElement,
   sectionElement,
 }: CommonEventProps) {
-  console.log(navigator)
   const platformArr = navigator.platform
     .toLowerCase()
     .match(/(linux|windows)/i)!
