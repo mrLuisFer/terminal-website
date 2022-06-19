@@ -1,7 +1,7 @@
 import "./scss/style.scss"
-import { events } from "./ts/events"
+import {events} from "./ts/events"
 import createLiHtml from "./ts/utils/createLiHtml"
-import { nanoid } from "nanoid"
+import {nanoid} from "nanoid"
 import clear from "./ts/events/clear"
 
 const commandList = document.querySelector<HTMLUListElement>("#command-list")!
@@ -20,8 +20,8 @@ commandInput?.addEventListener("change", (ev: any): void => {
   const elementId = nanoid(10)
 
   if (value.length > 0) {
-    createLiHtml({ value, listElement: commandList, id: elementId })
-    events({ value, id: elementId })
+    createLiHtml({value, listElement: commandList, id: elementId})
+    events({value, id: elementId})
   }
   ev.target.value = ""
 })
