@@ -4,7 +4,9 @@ import clear from "./clear"
 import exit from "./exit"
 import fetch from "./fetch"
 import open from "./open"
+import help from "./help"
 
+// TODO: convert this into an object key-value
 const eventsArray: string[] = [
   "ping",
   "clear",
@@ -15,7 +17,10 @@ const eventsArray: string[] = [
   "neofetch",
   "open",
   "mtrx",
-  "matrix"
+  "matrix",
+  "help",
+  "start",
+  "ayuda"
 ]
 
 let errorCount = 0;
@@ -64,6 +69,15 @@ export const events = ({value, id}: { value: string; id: string }): void => {
     case "mtrx":
       break
     case "matrix":
+      break
+    case "help":
+      help({liElement, sectionElement})
+      break
+    case "start":
+      help({liElement, sectionElement})
+      break
+    case "ayuda":
+      help({liElement, sectionElement})
       break
     default:
       commandError({event: value, liElement, sectionElement, errorCounter: errorCount})
