@@ -1,5 +1,5 @@
-import type {CommonEventProps} from "../types"
-import {resetErrorCounter} from "../events"
+import type { CommonEventProps } from "../types"
+import { resetErrorCounter } from "../events"
 
 interface ErrorEventProps extends CommonEventProps {
   event: string
@@ -7,15 +7,14 @@ interface ErrorEventProps extends CommonEventProps {
 }
 
 const commandError = ({
-                        event,
-                        liElement,
-                        sectionElement,
-                        errorCounter
-                      }: ErrorEventProps) => {
+  event,
+  liElement,
+  sectionElement,
+  errorCounter,
+}: ErrorEventProps) => {
   sectionElement.classList.add("command__content--error")
   sectionElement.textContent = `Error in ${event}: Command not found...`
   liElement.insertAdjacentElement("afterend", sectionElement)
-  console.log(errorCounter)
   if (errorCounter >= 4) {
     const suggestionHtml = `
       <p>Do you want to make a suggestion to add the <span>${event}</span> command?</p>
