@@ -1,7 +1,8 @@
 - neofetch browser ✅
 - matrix styles
 - open command with some url as a value ✅
-- help command
+- help command ✅
 - suggest command (open on the issues' repository) ✅
 - random meme command
 - use rick and morty api (?)
+- google command (search in google)
