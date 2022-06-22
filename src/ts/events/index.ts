@@ -7,7 +7,7 @@ import open from "./open"
 import help from "./help"
 
 // TODO: convert this into an object key-value
-const eventsArray: string[] = [
+export const eventsArray: string[] = [
   "ping",
   "clear",
   "cls",
