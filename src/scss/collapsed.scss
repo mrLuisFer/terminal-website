@@ -1,0 +1,99 @@
+/* This should be a toggle class */
+.baseMinimalHeader {
+  display: none;
+  opacity: 0;
+  transition: all 0.2s ease-out;
+}
+
+.collapse {
+  &__container {
+    padding: 1rem 1rem 0;
+    transition: all 0.2s ease-in;
+    position: relative;
+    animation: collapse 0.4s alternate;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (min-width: 600px) {
+      gap: 1.5rem;
+      justify-content: flex-start;
+    }
+  }
+
+  &__commonBtn {
+    padding: 0.3rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.2s ease;
+    position: relative;
+
+    &:hover {
+      background-color: var(--foreground);
+      color: var(--bg);
+
+      @media (max-width: 800px) {
+        &::after {
+          content: attr(data-text);
+          color: #fff;
+          position: absolute;
+          background: var(--bg);
+          width: max-content;
+          padding: 0.1rem 0.5rem;
+          height: 30px;
+          top: 40px;
+          z-index: 9;
+          border-radius: 5px;
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 0.9rem;
+          right: 0;
+        }
+      }
+    }
+
+    // It overrides the commonBtn class with the ::after pseudo element
+    &--arrow {
+      &:hover {
+        @media (max-width: 800px) {
+          &::after {
+            content: attr(data-text);
+            color: #fff;
+            position: absolute;
+            background: var(--bg);
+            width: max-content;
+            padding: 0.1rem 0.5rem;
+            height: 30px;
+            top: 30px;
+            z-index: 9;
+            border-radius: 5px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes collapse {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
