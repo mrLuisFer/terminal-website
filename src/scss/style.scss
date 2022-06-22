@@ -137,37 +137,14 @@ body {
     color: var(--foreground);
   }
 
-  &__list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 0 0 0 1rem;
-    font-size: 0.8rem;
+  &__helpItem {
+    opacity: 0.8;
+    transition: 0.2s ease;
+    font-size: 0.9rem;
 
-    p {
-      margin: 0;
-      opacity: 0.8;
-
-      &:hover {
-        opacity: 1;
-
-        span {
-          color: var(--cyan);
-        }
-      }
-    }
-
-    li {
-      opacity: 0.8;
-      transition: 0.2s ease;
-      display: inline-block;
-      font-size: 0.9rem;
-
-      &:hover {
-        opacity: 1;
-        color: var(--cyan);
-      }
+    &:hover {
+      opacity: 1;
+      color: var(--cyan);
     }
   }
 }
