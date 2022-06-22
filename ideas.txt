@@ -1,6 +1,6 @@
 - neofetch browser ✅
 - matrix styles
-- open command with some url as a value
+- open command with some url as a value ✅
 - help command
 - suggest command (open on the issues' repository) ✅
 - random meme command
