@@ -11,6 +11,7 @@ const clearIcon = document.querySelector<HTMLElement>("#clearIcon")!
 const terminalSection = document.querySelector<HTMLElement>("#terminal")!
 const headerMenuIcon = document.querySelector<HTMLElement>("#headerMenuIcon")!
 const headerMenu = document.querySelector<HTMLElement>("#headerMenu")!
+
 window.addEventListener("load", () => {
   const windowWidth: number = window.innerWidth
   commandInput.maxLength = windowWidth > 500 ? 50 : 20
@@ -50,4 +51,3 @@ commandInput?.addEventListener("change", (ev: any): void => {
 clearIcon?.addEventListener("click", () => {
   clear()
 })
-

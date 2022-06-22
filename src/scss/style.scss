@@ -249,3 +249,21 @@ body {
   background-color: var(--bg);
   color: var(--yellow);
 }
+
+.heroMsg {
+  padding: 0 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--comment);
+
+  p {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    span {
+      color: var(--cyan);
+    }
+  }
+}

@@ -51,7 +51,12 @@
   <body>
     <main class="app" id="app">
       <section id="collapseHeader" class="baseMinimalHeader">
-        <button data-text="Extend Header" title="Extend Header" id="extendHeader" class="collapse__commonBtn collapse__commonBtn--arrow">
+        <button
+          data-text="Extend Header"
+          title="Extend Header"
+          id="extendHeader"
+          class="collapse__commonBtn collapse__commonBtn--arrow"
+        >
           <i class="fa-solid fa-angle-down"></i>
         </button>
         <button data-text="Clear" title="Clear" class="collapse__commonBtn">
@@ -122,6 +127,14 @@
           </button>
         </div>
       </header>
+      <section class="heroMsg" id="heroMsg">
+        <p>Welcome to a terminal emulator.</p>
+        <p>
+          You can start by typing the command <span>"help"</span> to know the
+          other commands
+        </p>
+      </section>
+
       <section class="terminal" id="terminal">
         <ul class="commandList" id="command-list"></ul>
         <section class="command">
